@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Toolbar</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+      [(ngModel)]="searchString"
+      (ngModelChange)="search$.next($event)"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for (volume of $volumes(); track volume.id) {
+    <ion-item>
+      <ion-label color="primary">{{ volume.volumeInfo.title }}</ion-label>
+    </ion-item>
+    }@empty {
+    <ion-item>
+      <ion-label>No results found</ion-label>
+    </ion-item>
+    }
+  </ion-list>
+</ion-content>

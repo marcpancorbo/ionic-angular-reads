@@ -9,7 +9,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "ios:open": "npx cap open ios",
+    "ios:run": "ionic build && ionic cap copy && ionic cap sync"
   },
   "private": true,
   "dependencies": {
@@ -24,8 +26,10 @@
     "@capacitor/app": "5.0.7",
     "@capacitor/core": "5.7.4",
     "@capacitor/haptics": "5.0.7",
+    "@capacitor/ios": "5.7.4",
     "@capacitor/keyboard": "5.0.8",
     "@capacitor/status-bar": "5.0.7",
+    "@codetrix-studio/capacitor-google-auth": "^3.4.0-rc.0",
     "@ionic/angular": "^7.5.0",
     "ionicons": "^7.2.1",
     "rxjs": "~7.8.0",
@@ -47,6 +51,7 @@
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^48.2.1",
@@ -58,6 +63,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
     "typescript": "~5.2.2"
   },
   "description": "An Ionic project"
